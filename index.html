@@ -23,6 +23,9 @@
       <h2>{{ carVendor }} {{ carModel }} {{ carPrice }}</h2>
       
       <button v-on:click="getAllCars">Get Cars</button>
+      <br><br>
+      <input v-model="carId" placeholder="Car Id" />
+      <button @click="removeCar">Remove Car</button>
 
       <h3>Status: {{ statusCode }}</h3>
 
