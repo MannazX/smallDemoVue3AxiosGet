@@ -7,7 +7,8 @@ const app = Vue.createApp({
             carList:[],
             carVendor: '',
             carModel: '',
-            carPrice: 0
+            carPrice: 0,
+            statusCode: ''
         }
     },
     methods: {
@@ -22,6 +23,7 @@ const app = Vue.createApp({
                 response => {
                     console.log(response)
                     this.carList = response.data
+                    this.statusCode = response.status
                 }
             )
             .catch(
